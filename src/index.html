@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="scss/main.scss">
 </head>
 
 <body>
 
-    <h1>teest</h1>
+    <div class="main">
+        <h1 class="main-title">
+            This is a quiz.
+        </h1>
 
+        <div class=main-center>
+            <h2 class="question" id="question">What is the difference between a crocodile and an alligator?</h2>
+            <div class=choices>
+                <div class=choice-a>
+                    <input class="choices-btn choice-1" name="choice-1" type="radio" value="A">
+                    <label for=choice-1>Cheese</label>
+                </div>
+                <div class=choice-b>
+                    <input class="choices-btn choice-2" name="choice-2" type="radio" value="B">
+                    <label for=choice-2>Cheese</label>
+                </div>
+                <div class=choice-c>
+                    <input class="choices-btn choice-3" name="choice-3" type="radio" value="C">
+                    <label for=choice-3>Cheese</label>
+                </div>
+                <div class="choice-d">
+                    <input class="choices-btn choice-4" name="choice-4" type="radio" value="D">
+                    <label for=choice-4>Cheese</label>
+                </div>
+            </div>
+
+            <div class=bottom>
+                <div class=back>
+                    <button class="back-btn" id="back-btn">Back</button>
+                </div>
+                <div class="next">
+                    <button class="next-btn" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
     <script src="js/index.js"></script>
 
