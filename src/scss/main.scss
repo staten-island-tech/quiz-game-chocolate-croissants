@@ -1,27 +1,83 @@
+@import "_variables.scss";
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   //font-size: 62.5%;
+  font-family: $main-font;
+}
+
+body {
+  background-color: $background;
 }
 
 .main {
   border: 1px solid black;
+  padding: 1rem;
+  border-radius: 2rem;
   width: 50vw;
+  height: 70vh;
   margin: 5vh auto;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.final-title {
+  text-align: center;
+  display: none;
+}
+
+#startbtn {
+  background-color: $highlight;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 50vh;
+  cursor: pointer;
+}
+
+#restartbtn {
+  background-color: $highlight;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 50vh;
+  cursor: pointer;
+  display: none;
 }
 
 .main-center {
   border: 1px solid black;
   width: 80%;
+  height: 75%;
+  border-radius: 2rem;
   margin: auto;
   padding: 1.5rem;
 }
 
+.top80 {
+  height: 80%;
+}
+
 .choices-btn {
-  display: auto;
-  padding: 2vw auto;
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
 }
 
 .choice-a,
@@ -34,9 +90,21 @@ body {
 .bottom {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  vertical-align: baseline;
 }
 
 .back-btn,
 .next-btn {
-  margin: 2rem auto 1rem;
+  display: inline-flex;
+  bottom: 30vh;
+  background-color: $highlight;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  cursor: pointer;
 }
