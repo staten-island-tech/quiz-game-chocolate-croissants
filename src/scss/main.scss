@@ -31,17 +31,17 @@ body {
   display: none;
 }
 
-#startbtn {
+/*#startbtn {
   background-color: $highlight;
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
   font-size: 1rem;
-  margin: auto;
-  margin-top: 50vh;
   cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ body {
   margin-top: 50vh;
   cursor: pointer;
   display: none;
-}
+}*/
 
 .main-center {
   border: 1px solid black;
@@ -71,6 +71,7 @@ body {
 
 .top80 {
   height: 80%;
+  opacity: 0;
 }
 
 .choices-btn {
@@ -94,7 +95,7 @@ body {
   vertical-align: baseline;
 }
 
-.back-btn,
+.exit-btn,
 .next-btn {
   display: inline-flex;
   bottom: 30vh;
@@ -107,4 +108,8 @@ body {
   display: block;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.exit-btn {
+  filter: grayscale(100%);
 }

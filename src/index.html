@@ -15,14 +15,43 @@
 <body>
 
     <div class="main" id="main">
-        <h1 class="main-title">
+        <h1 class="main-title" id="main-title">
             Welcome. Press 'start' to start the quiz.
         </h1>
         <h1 class="final-title">
             Congratulations, you finished the quiz. You scored a $`correct`/$`total`.
         </h1>
-        <button class="start-quiz" id="startbtn">Start</button>
-        <button class="restart-quiz" id="restartbtn">Retake Quiz</button>
+        <div class='main-center'>
+            <div class='top80' id="top80">
+                <h2 class='question' id='question'></h2>
+                <div class='choices'>
+                    <div class='choice-a'>
+                        <input class='choices-btn choice-1' name='1' type='radio' value='A'>
+                        <label id="choice1"></label>
+                    </div>
+                    <div class='choice-b'>
+                        <input class='choices-btn choice-2' name='1' type='radio' value='B'>
+                        <label id="choice2"></label>
+                    </div>
+                    <div class='choice-c'>
+                        <input class='choices-btn choice-3' name='1' type='radio' value='C'>
+                        <label id="choice3"></label>
+                    </div>
+                    <div class='choice-d'>
+                        <input class='choices-btn choice-4' name='1' type='radio' value='D'>
+                        <label id="choice4"></label>
+                    </div>
+                </div>
+            </div>
+            <div class='bottom'>
+                <div class='back'>
+                    <button class='exit-btn' id='exit-btn'>Exit</button>
+                </div>
+                <div class='next'>
+                    <button class='next-btn' id='main-btn'>Start</button>
+                </div>
+            </div>
+        </div>
 
 
 
