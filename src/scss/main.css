@@ -21,7 +21,7 @@ body {
   height: 12vh;
   margin: 5vh auto;
   background-color: #367db8;
-  opacity: 80%;
+  opacity: 0.8;
   color: white;
 }
 
@@ -70,7 +70,7 @@ body {
   margin: auto;
   padding: 1.5rem;
   background-color: #ec992d;
-  opacity: 80%;
+  opacity: 0.8;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,7 +104,7 @@ body {
 .choice-d {
   margin: 1rem auto;
   background-color: white;
-  opacity: 90%;
+  opacity: 0.9;
   height: 2rem;
   border-radius: 10px;
   color: black;
