@@ -44,6 +44,7 @@ function changeMainButtonToNext() {
   const top80 = document.getElementById("top80");
   mainButton.innerHTML = "Next";
   top80.style.opacity = "1";
+  inputs.forEach((input) => (input.checked = false));
 }
 
 function changeMainButtonToGradeQuiz() {
@@ -51,10 +52,10 @@ function changeMainButtonToGradeQuiz() {
 }
 
 function checkIfRight(num) {
-  const c1 = document.getElementsByName("1")[0];
-  const c2 = document.getElementsByName("1")[1];
-  const c3 = document.getElementsByName("1")[2];
-  const c4 = document.getElementsByName("1")[3];
+  const c1 = inputs[0];
+  const c2 = inputs[1];
+  const c3 = inputs[2];
+  const c4 = inputs[3];
   if (c1.checked == true) {
     c1.checked = false;
     if ("A" == questions[num].correct) {
