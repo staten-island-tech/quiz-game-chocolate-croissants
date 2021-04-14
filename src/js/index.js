@@ -100,7 +100,7 @@ mainButton.addEventListener("click", function () {
 });
 
 function findNumberOfSelf(self, selfArray) {
-  for (var i = 0; i < selfArray.length; i++) {
+  for (let i = 0; i < selfArray.length; i++) {
     if (self === selfArray[i]) {
       return i;
     }

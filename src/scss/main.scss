@@ -5,8 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //font-size: 62.5%;
-  font-family: Source Code Pro;
+  font-family: $main-font;
 }
 
 body {
@@ -22,9 +21,9 @@ body {
   width: 50vw;
   height: 12vh;
   margin: 5vh auto;
-  background-color: rgb(54, 125, 184);
+  background-color: $top-color;
   opacity: 0.8;
-  color: white;
+  color: $white;
 }
 
 .main-title {
@@ -36,35 +35,6 @@ body {
   display: none;
 }
 
-/*#startbtn {
-  background-color: $highlight;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#restartbtn {
-  background-color: $highlight;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 1rem;
-  margin: auto;
-  margin-top: 50vh;
-  cursor: pointer;
-  display: none;
-}*/
-
 .main-center {
   border: 1px solid black;
   width: 50vw;
@@ -72,7 +42,7 @@ body {
   border-radius: 2rem;
   margin: auto;
   padding: 1.5rem;
-  background-color: rgb(236, 153, 45);
+  background-color: $main-color;
   opacity: 0.8;
   color: white;
   display: flex;
@@ -81,7 +51,6 @@ body {
 
 .top80 {
   opacity: 0;
-  //height: 80%;
 }
 
 .choices-btn {
@@ -94,7 +63,7 @@ body {
 .choice-b:hover,
 .choice-c:hover,
 .choice-d:hover {
-  background-color: rgb(255, 240, 106);
+  background-color: $choices;
 }
 
 .choice-a,
@@ -102,7 +71,7 @@ body {
 .choice-c,
 .choice-d {
   margin: 1rem auto;
-  background-color: white;
+  background-color: $white;
   opacity: 0.9;
   height: 2rem;
   border-radius: 10px;
@@ -121,7 +90,7 @@ body {
 .next-btn {
   display: inline-flex;
   bottom: 30vh;
-  background-color: pink;
+  background-color: $buttons;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -131,16 +100,17 @@ body {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
-  font-family: source code pro;
+  font-family: inherit;
 }
+
 .exit-btn:hover {
-  background-color: rgb(26, 185, 177);
+  background-color: $button-color;
   color: white;
   transform: scale(1.3);
 }
 
 .next-btn:hover {
-  background-color: rgb(26, 185, 172);
+  background-color: $button-color;
   color: white;
   transform: scale(1.3);
 }
