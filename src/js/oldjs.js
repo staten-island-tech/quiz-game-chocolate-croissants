@@ -1,13 +1,11 @@
-import { questions } from "./_variables";
-import { mainButton } from "./_variables";
-import { exitButton } from "./_variables";
-import { divs } from "./_variables";
-import { inputs } from "./_variables";
+import { questions } from "./_questions";
 
 let numCorrect = 0;
 let questionNumber = 0;
+const mainButton = document.getElementById("main-btn");
+const exitButton = document.getElementById("exit-btn");
 
-function insertQuestionValues(qNum) {
+function insertQuestionVars(qNum) {
   const title = document.getElementById("main-title");
   const question = document.getElementById("question");
   const choice1 = document.getElementById("choice1");
@@ -22,35 +20,11 @@ function insertQuestionValues(qNum) {
   choice4.innerText = questions[qNum].choice4;
 }
 
-function changeHTMLandGoToNextQuestion() {
-  insertQuestionValues(questionNumber);
-  questionNumber += 1;
-}
-
-function changeHTMLandFinishQuiz(numberQuestions) {
-  const top60 = document.getElementById("choices");
-  const title = document.getElementById("main-title");
-  top60.style.opacity = "0";
-  title.innerText = "You finished the Quiz";
-  question.innerText = `You got ${numCorrect}/${numberQuestions}`;
-  mainButton.innerHTML = "Retake";
-}
-
 exitButton.onclick = function () {
   location.reload();
 };
 
-function changeMainButtonToNext() {
-  const top80 = document.getElementById("top80");
-  mainButton.innerHTML = "Next";
-  top80.style.opacity = "1";
-}
-
-function changeMainButtonToGradeQuiz() {
-  mainButton.innerHTML = "Grade Quiz";
-}
-
-function checkIfRight(num) {
+function findWhichChoiceIsSelected(num) {
   const c1 = document.getElementsByName("1")[0];
   const c2 = document.getElementsByName("1")[1];
   const c3 = document.getElementsByName("1")[2];
@@ -79,37 +53,33 @@ function checkIfRight(num) {
 }
 
 mainButton.addEventListener("click", function () {
+  const top80 = document.getElementById("top80");
   const numberQuestions = questions.length;
   if (questionNumber == 0) {
-    changeMainButtonToNext();
-    changeHTMLandGoToNextQuestion();
-  } else if (questionNumber < numberQuestions - 1) {
-    checkIfRight(questionNumber - 1);
-    changeHTMLandGoToNextQuestion();
-  } else if (questionNumber == numberQuestions - 1) {
-    checkIfRight(questionNumber - 1);
-    changeHTMLandGoToNextQuestion();
-    changeMainButtonToGradeQuiz();
-  } else if (questionNumber == numberQuestions) {
-    checkIfRight(questionNumber - 1);
+    mainButton.innerHTML = "Next";
+    top80.style.opacity = "1";
+    insertQuestionVars(questionNumber);
     questionNumber += 1;
-    changeHTMLandFinishQuiz(numberQuestions);
+  } else if (questionNumber < numberQuestions - 1) {
+    findWhichChoiceIsSelected(questionNumber - 1);
+    insertQuestionVars(questionNumber);
+    questionNumber += 1;
+  } else if (questionNumber == numberQuestions - 1) {
+    mainButton.innerHTML = "Grade Quiz";
+    findWhichChoiceIsSelected(questionNumber - 1);
+    insertQuestionVars(questionNumber);
+    questionNumber += 1;
+  } else if (questionNumber == numberQuestions) {
+    const top60 = document.getElementById("choices");
+    const title = document.getElementById("main-title");
+    mainButton.innerHTML = "Grade Quiz";
+    findWhichChoiceIsSelected(questionNumber - 1);
+    questionNumber += 1;
+    top60.style.opacity = "0";
+    title.innerText = "You finished the Quiz";
+    question.innerText = `You got ${numCorrect}/${numberQuestions}`;
+    mainButton.innerHTML = "Retake";
   } else {
     location.reload();
   }
 });
-
-function findNumberOfSelf(self, selfArray) {
-  for (var i = 0; i < selfArray.length; i++) {
-    if (self === selfArray[i]) {
-      return i;
-    }
-  }
-}
-
-divs.forEach((choice) =>
-  choice.addEventListener("click", function () {
-    let whichChecked = findNumberOfSelf(choice, divs);
-    inputs[whichChecked].checked = true;
-  })
-);
