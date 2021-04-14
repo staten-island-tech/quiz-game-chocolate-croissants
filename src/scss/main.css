@@ -1,0 +1,156 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Source Code Pro;
+}
+
+body {
+  background-image: url("/src/img/question.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.main {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 50vw;
+  height: 12vh;
+  margin: 5vh auto;
+  background-color: #367db8;
+  opacity: 0.8;
+  color: white;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.final-title {
+  text-align: center;
+  display: none;
+}
+
+/*#startbtn {
+  background-color: $highlight;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#restartbtn {
+  background-color: $highlight;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 50vh;
+  cursor: pointer;
+  display: none;
+}*/
+.main-center {
+  border: 1px solid black;
+  width: 50vw;
+  height: 65vh;
+  border-radius: 2rem;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: #ec992d;
+  opacity: 0.8;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top80 {
+  opacity: 0%;
+}
+
+.choices-btn {
+  display: inline-block;
+  position: relative;
+  margin: 10px 0 0;
+}
+
+.choice-a:hover,
+.choice-b:hover,
+.choice-c:hover,
+.choice-d:hover {
+  background-color: #fff06a;
+}
+
+.choice-a,
+.choice-b,
+.choice-c,
+.choice-d {
+  margin: 1rem auto;
+  background-color: white;
+  opacity: 0.9;
+  height: 2rem;
+  border-radius: 10px;
+  color: black;
+  padding: 1rem 1rem;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  vertical-align: baseline;
+}
+
+.exit-btn,
+.next-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  bottom: 30vh;
+  background-color: pink;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: source code pro;
+}
+
+.exit-btn:hover {
+  background-color: #1ab9b1;
+  color: white;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.next-btn:hover {
+  background-color: #1ab9ac;
+  color: white;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+/*# sourceMappingURL=main.css.map */
