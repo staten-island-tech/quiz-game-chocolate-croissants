@@ -1,8 +1,4 @@
-import { questions } from "./_variables";
-import { mainButton } from "./_variables";
-import { exitButton } from "./_variables";
-import { divs } from "./_variables";
-import { inputs } from "./_variables";
+import { questions, mainButton, exitButton, divs, inputs } from "./_variables";
 
 let numCorrect = 0;
 let questionNumber = 0;
