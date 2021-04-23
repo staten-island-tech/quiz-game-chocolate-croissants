@@ -48,31 +48,14 @@ function changeMainButtonToGradeQuiz() {
 }
 
 function checkIfRight(num) {
-  const c1 = inputs[0];
-  const c2 = inputs[1];
-  const c3 = inputs[2];
-  const c4 = inputs[3];
-  if (c1.checked == true) {
-    c1.checked = false;
-    if ("A" == questions[num].correct) {
-      numCorrect++;
+  inputs.forEach((choice) => {
+    if (choice.checked == true) {
+      choice.checked = false;
+      if (choice.value == questions[num].correct) {
+        numCorrect++;
+      }
     }
-  } else if (c2.checked == true) {
-    c2.checked = false;
-    if ("B" == questions[num].correct) {
-      numCorrect++;
-    }
-  } else if (c3.checked == true) {
-    c3.checked = false;
-    if ("C" == questions[num].correct) {
-      numCorrect++;
-    }
-  } else if (c4.checked == true) {
-    c4.checked = false;
-    if ("D" == questions[num].correct) {
-      numCorrect++;
-    }
-  }
+  });
 }
 
 mainButton.addEventListener("click", function () {
